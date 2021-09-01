@@ -11,5 +11,5 @@ async function core() {
 }
 
 async function prepare() {
-    console.log('1')
+    console.log('12222')
   }
