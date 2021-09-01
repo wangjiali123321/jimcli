@@ -1,0 +1,10 @@
+0 silly argv { _: [ 'create' ], lernaVersion: '4.0.0', '$0': 'lerna', name: 'core' }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/lanjing/Desktop/github/jimcli
+3 error Error: Command failed with exit code 1: git config --get user.email
+3 error     at makeError (/usr/local/lib/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
+3 error     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:186:17)
+3 error     at Object.execSync (/usr/local/lib/node_modules/lerna/node_modules/@lerna/child-process/index.js:39:16)
+3 error     at CreateCommand.gitConfig (/usr/local/lib/node_modules/lerna/node_modules/@lerna/create/index.js:181:25)
+3 error     at CreateCommand.initialize (/usr/local/lib/node_modules/lerna/node_modules/@lerna/create/index.js:107:47)
+3 error     at /usr/local/lib/node_modules/lerna/node_modules/@lerna/command/index.js:274:24
