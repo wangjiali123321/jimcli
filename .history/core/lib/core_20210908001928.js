@@ -64,4 +64,5 @@ function registerCommand() {
     //     console.log();
     // }
 }
-
+    console.log('1222222')
+  }

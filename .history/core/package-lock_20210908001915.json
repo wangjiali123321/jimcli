@@ -1,6 +1,7 @@
 {
   "name": "@jim-cli/core",
   "version": "2.1.0",
+<<<<<<< HEAD
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -376,5 +377,7 @@
       "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A=="
     }
   }
+=======
   "lockfileVersion": 1
+>>>>>>> 7aef93861cea55ca294603cec3a4effe42c0c97e
 }

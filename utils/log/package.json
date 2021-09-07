@@ -1,14 +1,11 @@
 {
-  "name": "@jim-cli/core",
-  "version": "2.0.11",
+  "name": "@jim-cli/log",
+  "version": "2.1.2",
   "description": "> TODO: description",
   "author": "jim <473723204@qq.com>",
   "homepage": "https://github.com/wangjiali123321/jimcli#readme",
   "license": "ISC",
-  "main": "lib/core.js",
-  "bin": {
-    "jim-cli": "bin/index.js"
-  },
+  "main": "lib/log.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -29,5 +26,5 @@
   "bugs": {
     "url": "https://github.com/wangjiali123321/jimcli/issues"
   },
-  "gitHead": "f6d618f38f76c3024570f38e122af2f7caea0b01"
+  "gitHead": "2dd44a26a9840e8825ffac309392f851566e6f9c"
 }
