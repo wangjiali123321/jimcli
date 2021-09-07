@@ -18,6 +18,7 @@ async function core() {
 }
 
 async function prepare() {
+  console.log('12222')
 }
 
 function registerCommand() {

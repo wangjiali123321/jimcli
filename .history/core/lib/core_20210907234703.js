@@ -18,9 +18,11 @@ async function core() {
 }
 
 async function prepare() {
+  console.log('12222')
 }
 
 function registerCommand() {
+    console.log(Object.keys(pkg.bin)[0])
     program
         .name(Object.keys(pkg.bin)[0])
         .usage('<command> [options]')
@@ -57,7 +59,7 @@ function registerCommand() {
     //     }
     // });
 
-    program.parse(process.argv);
+    // program.parse(process.argv);
 
     // if (program.args && program.args.length < 1) {
     //     program.outputHelp();

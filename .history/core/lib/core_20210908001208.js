@@ -18,9 +18,11 @@ async function core() {
 }
 
 async function prepare() {
+  console.log('12222')
 }
 
 function registerCommand() {
+    console.log(Object.keys(pkg.bin)[0])
     program
         .name(Object.keys(pkg.bin)[0])
         .usage('<command> [options]')

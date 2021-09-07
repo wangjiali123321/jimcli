@@ -12,12 +12,13 @@ async function core() {
     } catch (error) {
         // log.error(e.message);
         if (program.debug) {
-          console.log(error);
+          console.log(e);
         }
     }
 }
 
 async function prepare() {
+  console.log('12222')
 }
 
 function registerCommand() {
@@ -57,7 +58,7 @@ function registerCommand() {
     //     }
     // });
 
-    program.parse(process.argv);
+    // program.parse(process.argv);
 
     // if (program.args && program.args.length < 1) {
     //     program.outputHelp();
