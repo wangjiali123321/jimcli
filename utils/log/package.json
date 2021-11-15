@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/wangjiali123321/jimcli/issues"
   },
-  "gitHead": "2dd44a26a9840e8825ffac309392f851566e6f9c"
+  "gitHead": "2dd44a26a9840e8825ffac309392f851566e6f9c",
+  "dependencies": {
+    "commander": "^8.2.0"
+  }
 }

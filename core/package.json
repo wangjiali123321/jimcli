@@ -27,7 +27,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@jim-cli/log": "file:../../utils/log"
+    "@jim-cli/log": "file:../utils/log",
+    "commander": "^8.2.0"
   },
   "bugs": {
     "url": "https://github.com/wangjiali123321/jimcli/issues"
