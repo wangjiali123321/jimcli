@@ -12,13 +12,12 @@ async function core() {
     } catch (error) {
         // log.error(e.message);
         if (program.debug) {
-          console.log(e);
+          console.log(error);
         }
     }
 }
 
 async function prepare() {
-  console.log('12222')
 }
 
 function registerCommand() {
@@ -35,14 +34,15 @@ function registerCommand() {
     //     .action(exec);
 
     // // 开启debug模式
-    // program.on('option:debug', function() {
-    //     if (program.debug) {
-    //     process.env.LOG_LEVEL = 'verbose';
-    //     } else {
-    //     process.env.LOG_LEVEL = 'info';
-    //     }
-    //     log.level = process.env.LOG_LEVEL;
-    // });
+    program.on('option:debug', function() {
+        if (program.debug) {
+        process.env.LOG_LEVEL = 'verbose';
+        } else {
+        process.env.LOG_LEVEL = 'info';
+        }
+        console.log(process.env.LOG_LEVEL)
+        // log.level = process.env.LOG_LEVEL;
+    });
 
     // // 指定targetPath
     // program.on('option:targetPath', function() {
@@ -50,18 +50,19 @@ function registerCommand() {
     // });
 
     // // 对未知命令监听
-    // program.on('command:*', function(obj) {
-    //     const availableCommands = program.commands.map(cmd => cmd.name());
-    //     console.log(colors.red('未知的命令：' + obj[0]));
-    //     if (availableCommands.length > 0) {
-    //     console.log(colors.red('可用命令：' + availableCommands.join(',')));
-    //     }
-    // });
+    program.on('command:*', function(obj) {
+        const availableCommands = program.commands.map(cmd => cmd.name());
+        console.log(colors.red('未知的命令：' + obj[0]));
+        if (availableCommands.length > 0) {
+        console.log(colors.red('可用命令：' + availableCommands.join(',')));
+        }
+    });
 
-    // program.parse(process.argv);
+    program.parse(process.argv);
 
     // if (program.args && program.args.length < 1) {
     //     program.outputHelp();
     //     console.log();
     // }
 }
+

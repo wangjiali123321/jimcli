@@ -34,14 +34,14 @@ function registerCommand() {
     //     .action(exec);
 
     // // 开启debug模式
-    // program.on('option:debug', function() {
-    //     if (program.debug) {
-    //     process.env.LOG_LEVEL = 'verbose';
-    //     } else {
-    //     process.env.LOG_LEVEL = 'info';
-    //     }
-    //     log.level = process.env.LOG_LEVEL;
-    // });
+    program.on('option:debug', function() {
+        if (program.debug) {
+        process.env.LOG_LEVEL = 'verbose';
+        } else {
+        process.env.LOG_LEVEL = 'info';
+        }
+        log.level = process.env.LOG_LEVEL;
+    });
 
     // // 指定targetPath
     // program.on('option:targetPath', function() {
