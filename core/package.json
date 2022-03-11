@@ -27,6 +27,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+<<<<<<< HEAD
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^8.2.0",
@@ -36,6 +37,10 @@
     "root-check": "^1.0.0",
     "semver": "^7.3.4",
     "user-home": "^2.0.0"
+=======
+    "@jim-cli/log": "file:../utils/log",
+    "commander": "^8.2.0"
+>>>>>>> 90088b52e2b08dc0978db818faf37d58cf99093f
   },
   "bugs": {
     "url": "https://github.com/wangjiali123321/jimcli/issues"
