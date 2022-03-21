@@ -1,7 +1,6 @@
 {
   "name": "@jim-cli/core",
   "version": "2.1.0",
-<<<<<<< HEAD
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -377,7 +376,24 @@
       "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A=="
     }
   }
-=======
   "lockfileVersion": 1
->>>>>>> 7aef93861cea55ca294603cec3a4effe42c0c97e
+    "@jim-cli/log": {
+      "version": "file:../utils/log",
+      "requires": {
+        "commander": "^8.2.0"
+      },
+      "dependencies": {
+        "commander": {
+          "version": "8.2.0",
+          "resolved": "https://registry.npmjs.org/commander/-/commander-8.2.0.tgz",
+          "integrity": "sha512-LLKxDvHeL91/8MIyTAD5BFMNtoIwztGPMiM/7Bl8rIPmHCZXRxmSWr91h57dpOpnQ6jIUqEWdXE/uBYMfiVZDA=="
+        }
+      }
+    },
+    "commander": {
+      "version": "8.2.0",
+      "resolved": "https://registry.npmjs.org/commander/-/commander-8.2.0.tgz",
+      "integrity": "sha512-LLKxDvHeL91/8MIyTAD5BFMNtoIwztGPMiM/7Bl8rIPmHCZXRxmSWr91h57dpOpnQ6jIUqEWdXE/uBYMfiVZDA=="
+    }
+  }
 }
