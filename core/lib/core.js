@@ -4,6 +4,7 @@ module.exports = core;
 
 const log = require('@jim-cli/log');
 const pkg = require('../package.json');
+const colors = require('colors/safe');
 const commander = require('commander')
 const program = new commander.Command();
 
@@ -18,7 +19,7 @@ async function core() {
 
 async function exec() {
     let targetPath = process.env.CLI_TARGET_PATH;
-    // console.log(process.env)
+    // // console.log(process.env)
     const homePath = process.env.CLI_HOME_PATH;
     let storeDir = '';
     let pkg;
@@ -26,8 +27,9 @@ async function exec() {
     log.verbose('homePath', homePath);
   
     const cmdObj = arguments[arguments.length - 1];
-    console.log('cmdObj',cmdObj)
+    
     const cmdName = cmdObj.name();
+    console.log('cmdName',cmdName)
     // const packageName = SETTINGS[cmdName];
     // const packageVersion = 'latest';
   
@@ -90,7 +92,7 @@ async function exec() {
     //     log.error(e.message);
     //   }
     // }
-  }
+}
 
 function registerCommand() {
     program
@@ -108,7 +110,8 @@ function registerCommand() {
     // // 开启debug模式
     program.on('option:debug', function() {
       const options = program.opts();
-      // console.log('options',options)
+      // console.log(program)
+      // console.log('options',options,options.debug,program.debug)
       if (options.debug) {
         process.env.LOG_LEVEL = 'verbose';
       } else {
@@ -121,14 +124,15 @@ function registerCommand() {
     // // 指定targetPath
     program.on('option:targetPath', function() {
       const options = program.opts();
-      // console.log('targetPath',options.targetPath)
+      console.log('targetPath',options,options.targetPath)
       process.env.CLI_TARGET_PATH = options.targetPath;
     });
   
     // // 对未知命令监听
     program.on('command:*', function(obj) {
-      // console.log('command',obj)
+      // console.log('command',obj,program.commands)
       const availableCommands = program.commands.map(cmd => cmd.name());
+      console.log('availableCommands',availableCommands)
       console.log(colors.red('未知的命令：' + obj[0]));
       if (availableCommands.length > 0) {
         console.log(colors.red('可用命令：' + availableCommands.join(',')));

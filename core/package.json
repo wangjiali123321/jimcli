@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "@jim-cli/log": "file:../utils/log",
-    "commander": "^8.2.0"
+    "commander": "^8.2.0",
+    "colors": "^1.4.0"
   },
   "bugs": {
     "url": "https://github.com/wangjiali123321/jimcli/issues"
