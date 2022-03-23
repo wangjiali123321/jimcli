@@ -1,6 +1,6 @@
 {
   "name": "@jim-cli/core",
-  "version": "2.0.11",
+  "version": "2.1.0",
   "description": "> TODO: description",
   "author": "jim <473723204@qq.com>",
   "homepage": "https://github.com/wangjiali123321/jimcli#readme",
@@ -25,6 +25,17 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^6.2.1",
+    "dotenv": "^8.2.0",
+    "import-local": "^3.0.2",
+    "npmlog": "^4.1.2",
+    "path-exists": "^4.0.0",
+    "root-check": "^1.0.0",
+    "semver": "^7.3.4",
+    "user-home": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/wangjiali123321/jimcli/issues"
