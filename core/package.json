@@ -28,13 +28,14 @@
   },
   "dependencies": {
     "@jim-cli/log": "file:../utils/log",
-    "commander": "^8.2.0",
     "colors": "^1.4.0",
+    "commander": "^8.2.0",
     "import-local": "^3.0.2",
     "npmlog": "^4.1.2",
     "path-exists": "^4.0.0",
     "root-check": "^1.0.0",
     "semver": "^7.3.4",
+    "simple-git": "^3.4.0",
     "user-home": "^2.0.0"
   },
   "bugs": {

@@ -4,6 +4,7 @@ module.exports = core;
 const commander = require('commander');
 const program = new commander.Command();
 const colors = require('colors')
+const SimpleGit = require('simple-git');
 
 const log = require('@jim-cli/log');
 const pkg = require('../package.json');
@@ -94,7 +95,16 @@ async function exec() {
     //     log.error(e.message);
     //   }
     // }
-  }
+}
+
+async function execgit() {
+  console.log('dirname',__dirname)
+  let git = SimpleGit(__dirname)
+  const status = await git.status();
+  console.log('status',status)
+}
+
+
 
 function registerCommand() {
     program
@@ -109,10 +119,10 @@ function registerCommand() {
       .option('-f, --force', '是否强制初始化项目')
       .action(exec);
 
-    //todo
-    // program
-    //   .command('git [projectName]')
-    //   .action(execgit);
+    // todo
+    program
+      .command('git')
+      .action(execgit);
   
     // // 开启debug模式
     program.on('option:debug', function() {
