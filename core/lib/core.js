@@ -24,8 +24,8 @@ async function exec() {
     let targetPath = process.env.CLI_TARGET_PATH;
     // console.log(process.env)
     const homePath = process.env.CLI_HOME_PATH;
-    let storeDir = '';
-    let pkg:string;
+    // let storeDir = '';
+    // let pkg
     log.verbose('targetPath', targetPath);
     log.verbose('homePath', homePath);
   
@@ -108,6 +108,11 @@ function registerCommand() {
       .command('init [projectName]')
       .option('-f, --force', '是否强制初始化项目')
       .action(exec);
+
+    //todo
+    // program
+    //   .command('git [projectName]')
+    //   .action(execgit);
   
     // // 开启debug模式
     program.on('option:debug', function() {
